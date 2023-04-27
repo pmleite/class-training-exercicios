@@ -1,0 +1,12 @@
+FROM ubuntu:latest
+
+RUN apt-get update && apt-get install -y cron
+
+# Cronjob to copy /data1 to /data every 5 minutes
+RUN echo "*/1 * * * * cp -r /data1/* data/" >> /etc/crontab
+
+CMD ["cron", "-f"]
+
+
+
+

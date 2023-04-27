@@ -5,9 +5,10 @@ services:
     build: .
     container_name: crontest
     volumes:
-      - ./data:/data
-      - ./data1:/data1
-      - ./data2:/data2
+      - ./data:/data/
+      - ./data1:/data1/
+      - ./data2:/data2/
+
 
 
   
